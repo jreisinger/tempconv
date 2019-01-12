@@ -1,6 +1,8 @@
 // Package tempconv performs Celsius and Fahrenheit temparature calculations.
 package tempconv
 
+import "fmt"
+
 type Celsius float64
 type Fahrenheit float64
 
@@ -12,3 +14,9 @@ const (
 
 func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
+
+// String method controls how values are printed as a string byt the fmt
+// package.
+func (c Celsius) String() string {
+	return fmt.Sprintf("%g°C", c)
+}
