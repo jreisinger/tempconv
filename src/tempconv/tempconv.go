@@ -12,6 +12,7 @@ type Kelvin float64
 const (
 	AbsoluteZeroC Celsius = -273.15
 	FreezingC     Celsius = 0
+	ZeroC         Celsius = FreezingC
 	BoilingC      Celsius = 100
 	ZeroK         Kelvin  = Kelvin(AbsoluteZeroC)
 )
@@ -19,9 +20,8 @@ const (
 // Conversion functions.
 func CToF(c Celsius) Fahrenheit { return Fahrenheit(c*9/5 + 32) }
 func FToC(f Fahrenheit) Celsius { return Celsius((f - 32) * 5 / 9) }
-
-func KtoC(k Kelvin) Celsius { return Celsius(k - ZeroK) }
-func CToK(c Celsius) Kelvin { return Kelvin(c + AbsoluteZeroC) }
+func KtoC(k Kelvin) Celsius     { return Celsius(k - ZeroK) }
+func CToK(c Celsius) Kelvin     { return Kelvin(c + AbsoluteZeroC) }
 
 // String method controls how values are printed as a string byt the fmt
 // package.
