@@ -1,4 +1,4 @@
-// Package tempconv performs Celsius and Fahrenheit temparature calculations.
+// Package tempconv performs Celsius and Fahrenheit/Kelvin temparature calculations.
 package tempconv
 
 import "fmt"

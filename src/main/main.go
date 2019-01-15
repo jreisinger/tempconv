@@ -7,14 +7,14 @@ import (
 )
 
 func main() {
-	// Define a slice of temparatures.
+	// Define a slice of temperatures.
 	temps := []tempconv.Celsius{
 		tempconv.AbsoluteZeroC,
 		tempconv.FreezingC,
 		tempconv.BoilingC,
 	}
 
-	// Show temperatures in Celsius and Fahrenheit.
+	// Show temperatures in Celsius and Fahrenheit/Kelvin.
 	for _, c := range temps {
 		fmt.Printf("%7.2f°C %7.2f°F\n", c, tempconv.CToF(c))
 		fmt.Printf("%7.2f°C %7.2f°K\n", c, tempconv.CToK(c))
